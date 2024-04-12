@@ -1,0 +1,100 @@
+.app {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 2.8rem; 
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem; 
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f4f4f4;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1.2em;
+  color: #777;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.hero button {
+  padding: 15px 30px; 
+  font-size: 1.5em; 
+  background-color: hwb(214 9% 88%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #0056b3;
+}
