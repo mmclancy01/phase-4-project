@@ -5,9 +5,9 @@ function Navbar() {
     <nav>
       <div className="logo">Track App</div>
       <ul>
-        <li><a href="#Profile">Profile</a></li>
-        <li><a href="#Exercises">Exercises</a></li>
-        <li><a href="#Activity">Activity</a></li>
+        <li><a href="Profile">Profile</a></li>
+        <li><a href="Exercises">Exercises</a></li>
+        <li><a href="workouts">Workouts</a></li>
         <li><a href="#LogIn">Log In</a></li>
       </ul>
     </nav>

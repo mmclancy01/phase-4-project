@@ -11,6 +11,7 @@ class WorkoutExercise(db.Model, SerializerMixin):
     sets = db.Column(db.Integer, nullable=False)
     reps = db.Column(db.Integer, nullable=False)
     
+    
     workouts = db.relationship('Workout', back_populates = 'workout_exercises')
     exercises = db.relationship('Exercise', back_populates = 'workout_exercises')
     
