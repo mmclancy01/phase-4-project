@@ -16,7 +16,7 @@ return (
                     <ul>
                     {w.workout_exercises.map(e => ( 
                             <li >
-                                <p>Name: {e.exercise_id} </p>
+                                <p>Name: {e.exercises.name} </p>
                                 <p>Sets: {e.sets} </p>
                                 <p>Reps: {e.reps} </p>
                             </li>
