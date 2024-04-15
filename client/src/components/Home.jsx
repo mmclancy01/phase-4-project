@@ -1,6 +1,7 @@
+// Home.js
 import React from 'react';
 
-function Home() {
+const Home = () => {
   return (
     <div className="home">
       <h1>Welcome to Fitness Tracker</h1>
@@ -22,6 +23,6 @@ function Home() {
       <button>Get Started</button>
     </div>
   );
-}
+};
 
 export default Home;
