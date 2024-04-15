@@ -1,14 +1,20 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   return (
-    <nav>
-      <div className="logo">Track App</div>
-      <ul>
-        <li><a href="#Profile">Profile</a></li>
-        <li><a href="#Exercises">Exercises</a></li>
-        <li><a href="#Activity">Activity</a></li>
-        <li><a href="#LogIn">Log In</a></li>
+    <nav className="navbar">
+      <div className="logo">Tracking Fitness</div>
+      <ul className="nav-links">
+        <li><a href="#Profile" className="nav-link">Profile</a></li>
+        <li><a href="#Exercises" className="nav-link">Exercises</a></li>
+        <li><a href="#Activity" className="nav-link">Activity</a></li>
+        <li className="login-icon">
+          <a href="#LogIn">
+            <FontAwesomeIcon icon={faUserCircle} size="lg" />
+          </a>
+        </li>
       </ul>
     </nav>
   );
