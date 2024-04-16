@@ -137,3 +137,338 @@ body {
 .feature {
   text-align: center;
 }
+nav {
+  background-color: #333; /* Background color */
+  padding: 10px; /* Padding */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Align items on the main axis */
+  align-items: center; /* Center items vertically */
+}
+
+/* Logo */
+
+
+/* Navbar links */
+.navbar ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navbar ul li {
+  display: inline; /* Display links horizontally */
+}
+
+.navbar ul li a {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding: 10px; /* Padding */
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  background-color: #555; /* Background color on hover */
+}
+.exercises-grid {
+  padding: 20px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Adjust minmax values as needed */
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  background-color: #090000; /* Card background color */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Card shadow for depth */
+  border-radius: 8px; /* Rounded corners for the card */
+  padding: 20px; /* Space inside the card */
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Container for the dropdown to help with alignment */
+.dropdown-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px; /* Adjust based on your navbar's height */
+  gap: 10px; /* Adds space between each select and label */
+  padding-bottom: 20px;
+}
+
+/* Styling for the dropdown */
+.exercise-dropdown {
+  padding: 10px 15px; /* Add some padding inside the dropdown for aesthetics */
+  border-radius: 5px; /* Slightly round the corners of the dropdown */
+  border: 1px solid #ccc; /* Add a light border */
+  font-size: 16px; /* Increase the font size for better readability */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+/* Additional styling for the dropdown on focus to improve accessibility */
+.exercise-dropdown:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #007bff; /* Change border color to indicate focus, choose a color that fits your design */
+}
+
+label[for="muscle-group-label"] {
+  font-size: 1.2rem; /* Makes the font a bit bigger */
+  margin-bottom: 10px; /* Adds some space between the label and the dropdown */
+  padding: 5px
+}
+
+.react-calendar {
+  width: 90%; /* Adjust the width as needed */
+  max-width: 1000px; /* Increase max-width for a bigger calendar */
+  background: white;
+  border: 1px solid #a0a096;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  margin: 60px auto; /* Adjust top margin to position just under the navbar */
+  display: block; /* Ensure the calendar is block-level for margin: auto to work */
+  font-size: 1.2em; /* Increase font size for better readability */
+}
+
+.react-calendar--doubleView {
+  width: 700px;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font: inherit;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+  color: #757575;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #050000;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth,
+.react-calendar__decade-view__years__year--neighboringDecade,
+.react-calendar__century-view__decades__decade--neighboringCentury {
+  color: #757575;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  font: inherit;
+  font-size: 0.833em;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+  color: #ababab;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth:disabled,
+.react-calendar__decade-view__years__year--neighboringDecade:disabled,
+.react-calendar__century-view__decades__decade--neighboringCentury:disabled {
+  color: #cdcdcd;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__tile--now {
+  background: #ffff76;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #ffffa9;
+}
+
+.react-calendar__tile--hasActive {
+  background: #76baff;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #a9d4ff;
+}
+
+.react-calendar__tile--active {
+  background: #006edc;
+  color: white;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #1087ff;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6;
+}
+
+
+/* Style for the react-calendar */
+.react-calendar__tile {
+  padding: 20px; /* Increase padding for larger tiles */
+  font-size: 1.2em; /* Adjust font size within tiles for better readability */
+}
+
+.react-calendar__month-view__days__day {
+  font-size: 1.2em; /* Increase day number font size */
+}
+.workout-day {
+  background-color: #f48422; /* Light red background */
+  color: white; /* White text color */
+  border-radius: 50%; /* Circular dates */
+}
+.workouts-list-container {
+  margin-top: 20px; /* Add top margin for spacing */
+  text-align: center; /* Center the content horizontally */
+}
+
+.workouts-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0;
+}
+
+.workout-item {
+  margin-bottom: 20px; /* Add bottom margin for spacing between workout items */
+}
+
+.exercises-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0;
+}
+
+.exercise-item {
+  margin-bottom: 10px; /* Add bottom margin for spacing between exercise items */
+}
+
+/* Increase font size */
+.workouts-list p,
+.exercises-list p {
+  font-size: 16px; /* Adjust font size as needed */
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}

@@ -7,10 +7,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Workouts from "./components/Workouts.jsx"
 import Exercises from "./components/Exercises.jsx"
 import Home from "./components/Home.jsx"
+import Login from "./components/Login.jsx"
+
 import {
     WorkoutLoader,
-    ExerciseLoader
+    ExerciseLoader,
+    userLoader
   } from './loaders.js'
+import Profile from "./components/Profile.jsx";
 
 
 
@@ -18,6 +22,7 @@ import {
       {
         path: "/",
         element: <App />,
+        loader: userLoader,
         children: [
           {
             path: "/",
@@ -33,7 +38,16 @@ import {
             element: <Workouts />,
             loader: WorkoutLoader
   
+          },
+          {
+            path: "/login",
+            element: <Login />,
+          },
+          {
+            path: "/profile",
+            element: <Profile />,
           }
+
         ],
       },
       {
