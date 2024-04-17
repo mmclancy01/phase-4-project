@@ -4,14 +4,14 @@
 
 # Remote library imports
 from flask import request, session
-from flask_restful import Resource
-from flask_migrate import Migrate
-from flask_cors import CORS
-import os
+# from flask_restful import Resource
+# from flask_migrate import Migrate
+# from flask_cors import CORS
+# import os
 # Local imports
-from config import app, db, api
+from config import app, db
 # Add your model imports
-from models import User, Exercise, Workout, WorkoutExercise
+from models import User, Exercise, Workout
 
 # Views go here!
 
@@ -65,7 +65,7 @@ def login():
     
     # store a cookie in the browser
     session['user_id'] = user.id
-
+    print(f"SESSION AFTER SUCCESSFUL LOGIN: {session}")
     # return a response
     return user.to_dict(), 200
 
@@ -99,8 +99,9 @@ def signup():
 @app.route('/check_session', methods=['GET'])
 def check_session():
     # get user id from the browser cookies
+    print(f"SESSION RETRIEVAL DURING CHECK SESH: {session}")
     user_id = session.get('user_id')
-
+    print(f"RETRIEVED USER ID FROM SESSION: {user_id}")
     # query the db to make sure that user id is valid
     user = User.query.filter(User.id == user_id).first()
 

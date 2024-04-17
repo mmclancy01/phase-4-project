@@ -16,8 +16,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URI']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
-app.secret_key = os.environ.get('SECRET_KEY', 'default_secret_key')
-
+app.secret_key = os.environ.get('SECRET_KEY')
 
 # set a secret key (needed for browser cookies)
 # app.secret_key = os.environ['SECRET_KEY']
@@ -33,5 +32,5 @@ db.init_app(app)
 api = Api(app)
 
 # Instantiate CORS
-CORS(app)
+# CORS(app)
 CORS(app, supports_credentials=True)
