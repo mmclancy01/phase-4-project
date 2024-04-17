@@ -27,9 +27,9 @@ if __name__ == '__main__':
         user1.password= 'abc'
         user2.password = 'abc'
         # Create workouts
-        workout1 = Workout(user_id=1, date=date(2024, 4, 10), duration=60, notes='Great workout!')
-        workout2 = Workout(user_id=2, date=date(2024, 4, 11), duration=45, notes='Feeling energized!')
-        workout3 = Workout(user_id=1, date=date(2024, 4, 12), duration=70, notes='Good workout!')
+        workout1 = Workout(user_id=1, date=date(2024, 4, 11), duration=60, notes='Great workout!')
+        workout2 = Workout(user_id=2, date=date(2024, 4, 12), duration=45, notes='Feeling energized!')
+        workout3 = Workout(user_id=1, date=date(2024, 4, 13), duration=70, notes='Good workout!')
         # Create exercises
         exercise1 = Exercise(name='Squats', muscle_group='Legs', difficulty='Intermediate', push_pull = 'Legs', img = "https://images.unsplash.com/photo-1596357395217-80de13130e92?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3F1YXR0aW5nfGVufDB8fDB8fHww" )
         exercise2 = Exercise(name='Bench Press', muscle_group='Chest', difficulty='Advanced', push_pull = 'Push', img = "https://plus.unsplash.com/premium_photo-1682094035772-a5ccdb07d9b0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmVuY2glMjBwcmVzc3xlbnwwfHwwfHx8MA%3D%3D")
