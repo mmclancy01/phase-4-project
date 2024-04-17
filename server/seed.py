@@ -55,7 +55,7 @@ if __name__ == '__main__':
    
 
 
-        # Create goals
+   
         
         # Add instances to the session
         db.session.add_all([user1, user2, workout1, workout2, exercise1, exercise2, exercise3 , workout3, exercise4 , exercise5, exercise6, exercise7, exercise8 , exercise9 , exercise10 , exercise11, exercise12 , exercise13, exercise14 , exercise15 , exercise16, exercise17,  exercise18, exercise19,  exercise20])

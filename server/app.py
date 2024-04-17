@@ -28,7 +28,7 @@ def get_exercises():
 def get_user_by_id(id):
     user = User.query.filter(User.id == id).first()
     if not user:
-        return {"error": "Restaurant not found"}, 404
+        return {"error": "User not found"}, 404
     else: 
         return user.to_dict(), 200
     
