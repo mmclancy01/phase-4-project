@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useOutletContext, useNavigate } from 'react-router-dom';
 
 function Login() {
+    const navigate = useNavigate();
     const [error, setError] = useState()
     const [msg, setMsg] = useState()
-
+    const {loggedin, setLoggedin} = useOutletContext()
     function handleSubmit(event) {
         event.preventDefault();
         const data = {
@@ -19,22 +21,13 @@ function Login() {
           credentials: 'include',
           body: JSON.stringify(data)
         })
-        .then(resp => {
-          if (resp.ok) {
-            setMsg('Log in successful!');
-            return resp.json(); // Ensure we only call .json() when the response is ok.
-          } else {
-            setMsg('Log in failed!');
-            return resp.json().then(data => Promise.reject(data)); // Properly reject with error data after parsing JSON.
-          }
-        })
-        .then(data => {
-          // Handle your data from resp.json() here
-        })
-        .catch(error => {
-          setError(error); // Now error is the parsed JSON error data.
-        });
-      }
+        .then((response)=> response.json())
+        .then((user)=> {
+        if (user.id){
+        setLoggedin(user)
+        navigate("/profile")
+    }})}
+        
 
       const errorElement = error ? <p style={{color: 'red'}}>{error.error}</p> : null
 

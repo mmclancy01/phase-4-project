@@ -6,21 +6,12 @@ const Home = () => {
     <div className="home">
       <h1>Welcome to Fitness Tracker</h1>
       <p>Track your workouts, set goals, and stay healthy.</p>
-      <section className="features">
-      <div className="feature">
-        <h2>Personal Training</h2>
-        <p>Get personalized workouts with top trainers.</p>
-      </div>
-      <div className="feature">
-        <h2>Group Classes</h2>
-        <p>Join group classes led by expert instructors.</p>
-      </div>
-      <div className="feature">
-        <h2>Luxury Amenities</h2>
-        <p>Enjoy luxurious facilities and amenities.</p>
-      </div>
-    </section>
-      <button>Get Started</button>
+      <img 
+        src="https://i.fbcd.co/products/original/gym-body-fitness-logo-man-and-woman-athletic-symbols-emblem-pw-ae271d847909ea34cab3b4bc490b94a334916286bcdcd13d1bf6fb05ad488c7e.jpg" 
+        alt="Fitness Tracker Logo" 
+        className="fitness-logo"
+      />
+      <a  href="/signup"><button className="get-started-button">Get Started</button></a>
     </div>
   );
 };

@@ -75,6 +75,7 @@ body {
   font-style: italic; /* Added font-style */
   padding-left: 20px;
   text-transform: uppercase; /* Added text transform */
+  color: white;
 }
 
 .nav-links {
@@ -201,6 +202,7 @@ nav {
   margin-top: 60px; /* Adjust based on your navbar's height */
   gap: 10px; /* Adds space between each select and label */
   padding-bottom: 20px;
+  font-size: 2rem;
 }
 
 /* Styling for the dropdown */
@@ -397,36 +399,37 @@ label[for="muscle-group-label"] {
 }
 .workout-day {
   background-color: #f48422; /* Light red background */
-  color: white; /* White text color */
-  border-radius: 50%; /* Circular dates */
+  color: rgb(252, 250, 250); /* White text color */
+  border-radius: 100%; /* Circular dates */
 }
-.workouts-list-container {
-  margin-top: 20px; /* Add top margin for spacing */
-  text-align: center; /* Center the content horizontally */
-}
-
 .workouts-list {
-  list-style: none; /* Remove default list styles */
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .workout-item {
-  margin-bottom: 20px; /* Add bottom margin for spacing between workout items */
+  background-color: #040000;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.workout-item p {
+  margin: 5px 0;
+  color: #fcfafa;
+  font-size: 1.5rem;
 }
 
 .exercises-list {
-  list-style: none; /* Remove default list styles */
+  list-style: none;
   padding: 0;
 }
 
 .exercise-item {
-  margin-bottom: 10px; /* Add bottom margin for spacing between exercise items */
-}
-
-/* Increase font size */
-.workouts-list p,
-.exercises-list p {
-  font-size: 16px; /* Adjust font size as needed */
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 10px;
 }
 .login-container {
   display: flex;
@@ -472,3 +475,118 @@ label[for="muscle-group-label"] {
 .login-button:hover {
   background-color: #0056b3;
 }
+
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align the content horizontally */
+  justify-content: center; /* Center-align the content vertically */
+  height: 100vh; /* Full viewport height */
+  margin-top: 10px;
+}
+
+
+.home h1 {
+  font-size: 2.5em; /* Larger font size for h1 */
+  margin-bottom: 20px; /* Add margin to the bottom */
+  font-weight: bold; /* Make the font bold */
+  color: #b36c6c; /* Set text color to white */
+}
+
+.home p {
+  font-size: 1.2em; /* Font size for paragraphs */
+  color: #b1a1a1; /* Set text color to light grey */
+  margin-bottom: 20px; /* Add margin to the bottom */
+}
+
+
+.fitness-logo {
+  width: 800px;  /* Set the desired width */
+  height: auto;  /* Maintain aspect ratio */
+  margin-bottom: 80px; /* Add margin to the bottom */
+  border-radius: 50%; /* Make the logo round */
+}
+
+.get-started-button {
+  padding: 20px 60px;
+  font-size: 1.2em;
+  background-color: rgb(240, 202, 202); /* Set button background to white */
+  color: #000000; /* Set button text color to black */
+  border: none;
+  border-radius: 50px; /* Make button round */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center; /* Center-align the button text */
+  margin-bottom:170px; /* Move the button higher */
+}
+
+
+  
+  .get-started-button:hover {
+    background-color: #ff3131; /* Light grey background on hover */
+    transform: scale(1.05);
+  }
+  .dropdown-container select {
+    width: 10%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style the options in the dropdown */
+  .dropdown-container select option {
+    padding: 10px;
+  }
+  
+  /* Style the selected option in the dropdown */
+  .dropdown-container select option:checked {
+    background-color: #ccc;
+  }
+
+  .profile-container {
+    
+    width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+  }
+  
+  .profile-container h1 {
+    color: #333;
+  }
+  .profile-container p {
+    color: #333;
+    font-size: 1.25rem;
+  }
+  .profile-info {
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.5rem;
+  }
+
+  .dede {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+  }
+  

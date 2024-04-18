@@ -8,6 +8,8 @@ import Workouts from "./components/Workouts.jsx"
 import Exercises from "./components/Exercises.jsx"
 import Home from "./components/Home.jsx"
 import Login from "./components/Login.jsx"
+import Logout from "./components/logout.jsx"
+import CreateWorkoutForm from "./components/NewWorkout.jsx"
 
 import {
     WorkoutLoader,
@@ -15,6 +17,7 @@ import {
     userLoader
   } from './loaders.js'
 import Profile from "./components/Profile.jsx";
+import SignUpForm from "./components/Signup.jsx";
 
 
 
@@ -46,7 +49,20 @@ import Profile from "./components/Profile.jsx";
           {
             path: "/profile",
             element: <Profile />,
-          }
+          },
+          {
+            path: "/logout",
+            element: <Logout />,
+          },
+          {
+            path: "/new",
+            element: <CreateWorkoutForm />,
+            loader: WorkoutLoader
+          },
+          {
+            path: "/signup",
+            element: <SignUpForm />,
+          },
 
         ],
       },
