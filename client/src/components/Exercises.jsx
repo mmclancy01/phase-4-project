@@ -40,7 +40,6 @@ function Exercises() {
           <option value="Chest">Chest</option>
           <option value="Back">Back</option>
           <option value="Legs">Legs</option>
-          <option value="Shoulders">Shoulders</option>
           <option value="Arms">Arms</option>
         </select>
 
