@@ -35,7 +35,7 @@ if __name__ == '__main__':
         exercise5 = Exercise(name='Deadlifts', muscle_group='Back', difficulty='Beginner', push_pull='Pull', img='https://blogscdn.thehut.net/wp-content/uploads/sites/478/2018/10/12113512/Blog-Deadlifting-Male_1800x1200.jpg')
         exercise6 = Exercise(name='Lunges', muscle_group='Legs', difficulty='Intermediate', push_pull='Legs', img='https://hips.hearstapps.com/hmg-prod/images/reverse-lunges-1544222100.jpg?crop=0.6235xw:1xh;center,top&resize=640:*')
         exercise7 = Exercise(name='Hammer Curls', muscle_group='Arms', difficulty='Intermediate', push_pull='Pull', img='https://www.trainheroic.com/wp-content/uploads/2023/02/AdobeStock_417412809-TH-jpg.webp')
-        exercise8 = Exercise(name='Bench Press', muscle_group='Chest', difficulty='Intermediate', push_pull='Push', img='https://wodprep.com/wp-content/uploads/2023/06/The-Ultimate-Guide-To-Bench-Press-in-CrossFit-1-scaled-e1686756414180.jpg')
+        
         exercise9 = Exercise(name='Rows', muscle_group='Back', difficulty='Intermediate', push_pull='Pull', img='https://images.ctfassets.net/8urtyqugdt2l/5JyoMOTRMiqUgeX3xcFAot/adc9c772286fb52694a1d39de481709a/barbell-row-tile.jpg')
         exercise10 = Exercise(name='Curls', muscle_group='Arms', difficulty='Intermediate', push_pull='Pull', img='https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2017/11/1109-hammer-curl.jpg?quality=86&strip=all')
         exercise11 = Exercise(name='Leg Press', muscle_group='Legs', difficulty='Intermediate', push_pull='Legs', img='https://yorkbarbell.com/wp-content/uploads/2017/01/55035_leg-press_in-use_low.jpg')
@@ -55,7 +55,7 @@ if __name__ == '__main__':
    
         
         # Add instances to the session
-        db.session.add_all([user1, user2, workout1, workout2, exercise1, exercise2, exercise3 , workout3, exercise4 , exercise5, exercise6, exercise7, exercise8 , exercise9 , exercise10 , exercise11, exercise12 , exercise13, exercise14 , exercise15 , exercise16, exercise17,  exercise18, exercise19,  exercise20])
+        db.session.add_all([user1, user2, workout1, workout2, exercise1, exercise2, exercise3 , workout3, exercise4 , exercise5, exercise6, exercise7, exercise9 , exercise10 , exercise11, exercise12 , exercise13, exercise14 , exercise15 , exercise16, exercise17,  exercise18, exercise19,  exercise20])
         
         # Create workout-exercise associations
         workout_exercise1 = WorkoutExercise(workout_id=1, exercise_id=1, sets=3, reps=10)
