@@ -3,7 +3,8 @@
 # Standard library imports
 
 # Remote library imports
-from flask import request, session
+from flask import request, session, jsonify
+from datetime import datetime
 # from flask_restful import Resource
 # from flask_migrate import Migrate
 # from flask_cors import CORS
@@ -11,7 +12,7 @@ from flask import request, session
 # Local imports
 from config import app, db
 # Add your model imports
-from models import User, Exercise, Workout
+from models import User, Exercise, Workout, WorkoutExercise
 
 # Views go here!
 
@@ -28,7 +29,7 @@ def get_exercises():
 def get_user_by_id(id):
     user = User.query.filter(User.id == id).first()
     if not user:
-        return {"error": "Restaurant not found"}, 404
+        return {"error": "User not found"}, 404
     else: 
         return user.to_dict(), 200
     
@@ -42,10 +43,37 @@ def get_workouts():
     workouts = Workout.query.all()
     return [w.to_dict() for w in workouts], 200
 
-@app.post("/workouts")
-def post_workouts():
-    pass
+@app.route('/workouts', methods=['POST'])
+def create_workout():
+    data = request.get_json()
 
+    # Convert date string to Python date object
+    date_str = data.get('date')
+    date_obj = datetime.strptime(date_str, '%Y-%m-%d').date()
+
+    # Assuming you have SQLAlchemy models named Workout and Exercise
+    new_workout = Workout(
+        user_id=data.get('user_id'),
+        date=date_obj,
+        duration=data.get('duration'),
+        notes=data.get('notes')
+    )
+    db.session.add(new_workout)
+    db.session.commit()
+
+    workout_exercises_data = data.get('workout_exercises', [])
+    for exercise_data in workout_exercises_data:
+        exercise = WorkoutExercise(
+            workout_id=new_workout.id,
+            exercise_id=exercise_data.get('exercise_id'),
+            reps=exercise_data.get('reps'),
+            sets=exercise_data.get('sets')
+        )
+        db.session.add(exercise)
+    
+    db.session.commit()
+
+    return jsonify({"message": "Workout added successfully", "workout_id": new_workout.id}), 201
 @app.post("/exercises")
 def post_exercises():
     pass
@@ -74,6 +102,7 @@ def login():
 def logout():
     # delete the user_id cookie
     session.pop('user_id', None)
+    print(session)
     return {}, 204
 @app.route('/signup', methods=['POST'])
 def signup():
@@ -111,6 +140,20 @@ def check_session():
     else:
         return user.to_dict(), 200
 
+@app.route('/workouts/<int:id>', methods=['DELETE'])
+def delete_workout(id):
+    workout = Workout.query.get(id)
+
+    # Check if the workout exists
+    if workout:
+        WorkoutExercise.query.filter(WorkoutExercise.workout_id == id).delete()
+        # Delete the workout object
+        db.session.delete(workout)
+        db.session.commit()
+        return jsonify({"message": "Workout deleted successfully"}), 204
+    else:
+        # If the workout does not exist, return a 404 Not Found status
+        return jsonify({"error": "Workout not found"}), 404
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
 
